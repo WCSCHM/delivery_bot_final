@@ -14,7 +14,7 @@ from launch.actions import TimerAction
 def generate_launch_description():
     launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
-    Delivery_Bot_dir = FindPackageShare(package='Delivery_Bot').find('Delivery_Bot')
+    Delivery_Bot_dir = FindPackageShare(package='delivery_Bot').find('delivery_bot')
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     x_pose = LaunchConfiguration('x_pose', default='-2.0')
     y_pose = LaunchConfiguration('y_pose', default='-1')
@@ -22,7 +22,7 @@ def generate_launch_description():
     world = os.path.join(
         Delivery_Bot_dir,
         'worlds',
-        'obstacle_course'
+        'cafe'
     )
 
     gzserver_cmd = IncludeLaunchDescription(

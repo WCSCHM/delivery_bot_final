@@ -22,7 +22,7 @@ def generate_launch_description():
         ),
 
         Node(
-            package='Delivery_Bot',
+            package='delivery_bot',
             executable='hamburger_drive',
             name='hamburger_drive'
         ),
