@@ -22,7 +22,7 @@ def generate_launch_description():
     world = os.path.join(
         Delivery_Bot_dir,
         'worlds',
-        'obstacle_course'
+        'restaurant.world'
     )
 
     gzserver_cmd = IncludeLaunchDescription(
@@ -51,7 +51,11 @@ def generate_launch_description():
         ),
         launch_arguments={
             'x_pose': x_pose,
-            'y_pose': y_pose
+            'y_pose': y_pose,
+            'z_pose': '1.22',   # 转为字符串
+            'roll': '0',        # 转为字符串
+            'pitch': '0',       # 转为字符串
+            'yaw': '0'          # 转为字符串
         }.items()
     )
 
@@ -64,3 +68,4 @@ def generate_launch_description():
     ld.add_action(spawn_turtlebot_cmd)
 
     return ld
+

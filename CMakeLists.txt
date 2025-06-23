@@ -71,6 +71,8 @@ set(dependencies
 )
 
 set(EXEC_NAME "hamburger_drive")
+set(EXEC_NAME "Astar")
+set(EXEC_NAME "Dijkstra")
 
 
 
